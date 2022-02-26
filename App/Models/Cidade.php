@@ -34,7 +34,7 @@ class Cidade
            $p_sql->bindValue(":id", $id);
            $p_sql->execute();
            $p_sql->setFetchMode(PDO::FETCH_CLASS, 'App\Models\Cidade');
-           $p_sql =  $p_sql->fetchAll();
+           $p_sql =  $p_sql->fetchObject();
            return $p_sql;
        }catch (PDOException $e){
            echo "Erro ao buscar cidade: ".$e->getMessage();

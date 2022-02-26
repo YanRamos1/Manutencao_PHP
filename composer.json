@@ -17,7 +17,8 @@
       "App\\Controllers\\": "App/Controllers/",
       "App\\Models\\": "App/Models/",
       "App\\Views\\": "App/Views/",
-      "App\\Includes\\": "App/Includes/"
+      "App\\Includes\\": "App/Includes/",
+      "App\\Views\\Layouts\\":  "App/Views/Layouts/"
     }
   }
 }

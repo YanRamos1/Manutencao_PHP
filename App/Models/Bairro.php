@@ -26,18 +26,23 @@ class Bairro extends Cidade
             print "Erro!: " . $e->getMessage() . "<br/>";
         }
     }
-    private function getCidadeById($cidade_id)
+    public function getCidadeById($cidade_id)
     {
         try {
             $sql = "SELECT * FROM cidade WHERE id = :id";
             $p_sql = Database::connect()->prepare($sql);
             $p_sql->bindValue(":id", $cidade_id);
             $p_sql->execute();
-            return $p_sql->fetch(PDO::FETCH_ASSOC);
+            return $p_sql->fetchObject();
         } catch (PDOException $e) {
             print "Erro!: " . $e->getMessage() . "<br/>";
         }
     }
+    public function setCidade($cidade)
+    {
+        $this->cidade = $cidade;
+    }
+
     public function all(){
         try{
             $sql = "SELECT * FROM bairro";
