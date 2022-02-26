@@ -2,7 +2,8 @@
 
 namespace App\Models;
 use App\Includes\Database;
-
+use PDO;
+use PDOException;
 
 
 class Cidade
@@ -27,14 +28,17 @@ class Cidade
         $this->nome = $nome;
     }
     public function getById($id){
-       $db = new Database();
-       $db = $db->connect();
-       $sql = "SELECT * FROM cidade WHERE id = :id";
-       $stmt = $db->prepare($sql);
-       $stmt->bindParam(':id', $id);
-       $stmt->execute();
-       $result = $stmt->fetchAll(\PDO::FETCH_ASSOC);
-       return $result;
+       try{
+           $sql = "SELECT * FROM cidade WHERE id = :id";
+           $p_sql = Database::connect()->prepare($sql);
+           $p_sql->bindValue(":id", $id);
+           $p_sql->execute();
+           $p_sql->setFetchMode(PDO::FETCH_CLASS, 'App\Models\Cidade');
+           $p_sql =  $p_sql->fetchAll();
+           return $p_sql;
+       }catch (PDOException $e){
+           echo "Erro ao buscar cidade: ".$e->getMessage();
+       }
     }
 
 

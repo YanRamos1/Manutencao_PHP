@@ -6,16 +6,18 @@ use PDOException;
 
 class Database
 {
-    private $host = 'localhost';
-    private $db_name = 'db_manutencao';
-    private $username = 'root';
-    private $password = '';
+    public $host = 'localhost';
+
     public $conn;
 
-    public function connect(){
+    public static function connect(){
         try{
-            $this->conn = new PDO('mysql:host='.$this->host.';dbname='.$this->db_name, $this->username, $this->password);
-            return $this->conn;
+            $db_name = 'db_manutencao';
+            $username = 'root';
+            $password = '';
+            $host = 'localhost';
+            $conn = new PDO('mysql:host=' . $host . ';dbname='. $db_name, $username, $password);
+            return $conn;
         }catch (PDOException $e){
             echo 'Connection Error: '.$e->getMessage();
             return false;

@@ -85,7 +85,7 @@ class Cliente
      */
     public function getBairro()
     {
-        return $this->bairro;
+        return $this->Bairro();
     }
 
     /**
@@ -148,6 +148,20 @@ class Cliente
             $db = $db->connect();
             $stmt = $db->query($sql);
             return $stmt;
+        }catch (PDOException $e){
+            echo "Erro: ".$e->getMessage();
+            return null;
+        }
+    }
+
+    //relation bairro
+    public function Bairro(){
+        try{
+            $sql = "SELECT * FROM bairro WHERE id = '$this->bairro'";
+            $db = new Database();
+            $db = $db->connect();
+            $stmt = $db->query($sql);
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
         }catch (PDOException $e){
             echo "Erro: ".$e->getMessage();
             return null;
