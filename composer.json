@@ -1,24 +1,15 @@
 {
-  "description": "description",
-  "minimum-stability": "stable",
-  "license": "MIT",
+  "name": "$vendor_name$/$package_name$",
+  "description": "$description$",
+  "minimum-stability": "$stability$",
+  "license": "$license$",
   "authors": [
     {
-      "name": "Administrator",
-      "email": "email@example.com"
+      "name": "$author$",
+      "email": "$email$"
     }
   ],
   "require": {
-    "ext-pdo": "*"
-  },
-  "autoload": {
-    "psr-4": {
-      "App\\": "App/",
-      "App\\Controllers\\": "App/Controllers/",
-      "App\\Models\\": "App/Models/",
-      "App\\Views\\": "App/Views/",
-      "App\\Includes\\": "App/Includes/",
-      "App\\Views\\Layouts\\":  "App/Views/Layouts/"
-    }
+    $END$
   }
 }
