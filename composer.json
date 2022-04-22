@@ -1,15 +1,23 @@
 {
-  "name": "$vendor_name$/$package_name$",
-  "description": "$description$",
-  "minimum-stability": "$stability$",
-  "license": "$license$",
   "authors": [
     {
-      "name": "$author$",
-      "email": "$email$"
+      "name": "Administrator",
+      "email": "email@example.com"
     }
   ],
+  "autoload": {
+    "psr-4": {
+      "app\\": "app/",
+      "app\\controllers\\": "app/controllers/",
+      "app\\models\\": "app/models/",
+      "app\\views\\": "app/views/",
+      "app\\helpers\\": "app/helpers/",
+      "app\\config\\": "app/config/",
+      "app\\core\\": "app/core/",
+      "app\\database\\": "app/database/"
+    }
+  },
   "require": {
-    $END$
+    "ext-pdo": "*"
   }
 }

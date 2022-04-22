@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace app\models;
 
 require_once '../../vendor/autoload.php';
 
