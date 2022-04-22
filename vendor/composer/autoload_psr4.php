@@ -9,6 +9,7 @@ return array(
     'app\\views\\' => array($baseDir . '/app/views'),
     'app\\models\\' => array($baseDir . '/app/models'),
     'app\\helpers\\' => array($baseDir . '/app/helpers'),
+    'app\\database\\' => array($baseDir . '/app/database'),
     'app\\core\\' => array($baseDir . '/app/core'),
     'app\\controllers\\' => array($baseDir . '/app/controllers'),
     'app\\config\\' => array($baseDir . '/app/config'),

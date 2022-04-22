@@ -1,10 +1,8 @@
 <?php
 
+define('BASE_URL', '/app-manutencao/');
 
-const BASE = '/htdocs/';
-
-
-const UNSET_URI_COUNT = 1;
-const DEBUG_URI = true;
+define('UNSET_URI_COUNT',1);
+define('DEBUG_URI_COUNT',true);
 
 

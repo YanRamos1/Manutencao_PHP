@@ -12,6 +12,7 @@ class ComposerStaticInitacf2365c619bdfb2ae5f78286b972d97
             'app\\views\\' => 10,
             'app\\models\\' => 11,
             'app\\helpers\\' => 12,
+            'app\\database\\' => 13,
             'app\\core\\' => 9,
             'app\\controllers\\' => 16,
             'app\\config\\' => 11,
@@ -31,6 +32,10 @@ class ComposerStaticInitacf2365c619bdfb2ae5f78286b972d97
         'app\\helpers\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app/helpers',
+        ),
+        'app\\database\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/database',
         ),
         'app\\core\\' => 
         array (

@@ -2,10 +2,6 @@
 
 namespace app\helpers;
 
-class Functions
-{
-
-
     function dd($params = [], $die = true)
     {
         echo '<pre>';
@@ -15,4 +11,3 @@ class Functions
             die();
         }
     }
-}
